@@ -29,9 +29,9 @@ export default function ShowTask({ task, onDelete, updateTask }) {
         <Form isUpdate={isUpdate} task={task} updateTask={taskUpdate} />
       ) : (
         <div className="p-8 flex flex-col gap-4 items-center justify-center">
-          <h1 className="text-3xl font-bold text-gray-600">Görev Başlığı</h1>
+          <h1 className="text-3xl font-bold text-gray-600">Task Title</h1>
           <h1>{task.title}</h1>
-          <h1 className="text-3xl font-bold text-gray-600">Görev Açıklaması</h1>
+          <h1 className="text-3xl font-bold text-gray-600">Task Description</h1>
           <p>{task.desc}</p>
           <div className="flex gap-4">
             <button

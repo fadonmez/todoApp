@@ -30,13 +30,13 @@ export default function Form({ kaydet, isUpdate, task, updateTask }) {
       {isUpdate ? (
         <div className="flex flex-col items-center justify-center bg-blue-500  p-8 rounded-b-xl">
           {" "}
-          <h1 className="text-2xl font-bold">Lütfen görev düzenleyiniz</h1>
+          <h1 className="text-2xl font-bold">Please update your task</h1>
           <form
             onSubmit={handleSubmit}
             className="flex flex-col gap-4 items-center justify-center w-full "
           >
             <label className="text-2xl font-bold" htmlFor="gorev">
-              Başlığı düzenleyin
+              Update your title
             </label>
             <input
               type="text"
@@ -47,7 +47,7 @@ export default function Form({ kaydet, isUpdate, task, updateTask }) {
               onChange={(e) => setTaskTitle(e.target.value)}
             />
             <label className="text-2xl font-bold" htmlFor="yap">
-              Yapılacakları düzenleyin
+              Update your todo's
             </label>
             <textarea
               type="text"
@@ -58,46 +58,46 @@ export default function Form({ kaydet, isUpdate, task, updateTask }) {
               onChange={(e) => setTaskDescription(e.target.value)}
             />
             <button className="px-4 py-2 rounded-lg w-full bg-green-500">
-              Gönder
+              Save
             </button>
           </form>
         </div>
       ) : (
         <div className="flex flex-col items-center justify-center bg-red-500 w-1/3 m-auto p-8 rounded-b-xl">
-          <h1 className="text-3xl font-bold">Lütfen görev giriniz</h1>
+          <h1 className="text-3xl font-bold">Please enter a task</h1>
           <form
             onSubmit={handleSubmit}
             className="flex flex-col gap-4 items-start justify-center w-full "
           >
             <label className="text-2xl font-bold" htmlFor="gorev">
-              Başlık
+              Title
             </label>
             <input
               type="text"
               id="gorev"
-              placeholder="Görev"
+              placeholder="Task"
               className="px-4 py-2 rounded w-full"
               value={taskTitle}
               onChange={(e) => setTaskTitle(e.target.value)}
             />
             <label className="text-2xl font-bold" htmlFor="yap">
-              Yapılacaklar
+              Todo's
             </label>
             <textarea
               type="text"
               id="yap"
-              placeholder="Yapılacaklar"
+              placeholder="Todo's"
               className="px-4 py-2 rounded w-full"
               value={taskDescription}
               onChange={(e) => setTaskDescription(e.target.value)}
             />
             <button className="px-4 py-2 rounded-lg w-full bg-green-500 hover:opacity-90 transition-opacity">
-              Gönder
+              Save
             </button>
           </form>
           <div className={alertText}>
             <h3 className=" text-red-800 text-2xl">
-              Lütfen boş alan bırakmayınız !
+              Please do not leave blank spaces !
             </h3>
           </div>
         </div>
